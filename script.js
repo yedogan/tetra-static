@@ -1,4 +1,4 @@
-// Mobile nav toggle + year + basic smooth scroll focus
+// Mobile nav toggle + copyright year
 const toggle = document.querySelector('.nav__toggle');
 const links = document.getElementById('navLinks');
 if (toggle) {
@@ -8,8 +8,8 @@ if (toggle) {
     toggle.setAttribute('aria-expanded', (!open).toString());
   });
 }
-document.getElementById('year').textContent = new Date().getFullYear();
-
+const yearSpan = document.getElementById('year');
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 // Close mobile menu on link click (small screens)
 document.querySelectorAll('#navLinks a').forEach(a => {
   a.addEventListener('click', () => {

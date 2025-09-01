@@ -1,26 +1,31 @@
-# Tetra Danışmanlık — Static Site (No Node.js)
+# Tetra Danışmanlık — Multi‑Page Static Site (No Node.js)
 
-This is a plain HTML/CSS/JS version of the Tetra landing page. You can deploy it on **GitHub Pages** without installing Node.js.
+This package contains a simple multi‑page website that you can deploy on **GitHub Pages**.
 
-## Files
-- `index.html` — the page
-- `styles.css` — styling
-- `script.js` — small JS for mobile nav & year
-- `CNAME` (optional) — if you have a custom domain, put it here (single line)
+## Structure
+- `index.html` — Home
+- `about.html` — About Us (mission, vision, values)
+- `services.html` — Detailed Services
+- `resources.html` — Blog/Resources (placeholders)
+- `contact.html` — Contact (map placeholder + form)
+- `styles.css` — Global styles + brand color variables at the top
+- `script.js` — Mobile nav + year
+- `assets/logo.png` — Replace with your real logo (same filename)
+- `assets/hero.jpg` — Optional hero image (replace)
+- `assets/map-placeholder.png` — Map placeholder (replace with Google Maps embed later)
+- `CNAME` — Optional: put your custom domain here (single line)
 
-## Deploy to GitHub Pages
-1. Create a new GitHub repo, e.g. `tetra-static`.
-2. Upload these files (drag & drop or `Add file > Upload files`).
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, pick **Deploy from a branch**.
-5. Select **main** branch and **/ (root)** folder. Save.
-6. Your site will appear at `https://<username>.github.io/tetra-static/` within a minute.
+## Apply your brand
+- Replace `assets/logo.png` with your real logo (ideally a square PNG or SVG).
+- Edit brand colors in `styles.css` under the `:root{}` variables.
 
-### Custom Domain (optional)
+## Deploy on GitHub Pages
+1. Create a new repo, e.g. `tetra-website`.
+2. Upload all these files to the repo **root**.
+3. Go to **Settings → Pages** → Source: **Deploy from a branch** → Branch: **main** → Folder: **/** (root) → **Save**.
+4. Your site will be live at `https://<username>.github.io/tetra-website/` shortly.
+
+## Custom domain (optional)
 - Add your domain under **Settings → Pages → Custom domain**.
-- Create DNS record: `CNAME` → `<username>.github.io`.
-- Add a `CNAME` file in the repo root containing only your domain name.
-
----
-
-Feel free to replace placeholder text/images and adjust colors in `styles.css`.
+- Create DNS `CNAME` to `<username>.github.io`.
+- Ensure the repo has a `CNAME` file containing only your domain.
